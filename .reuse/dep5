@@ -29,8 +29,11 @@ Files:
   Package.resolved
   Sources/
   Tests/
+  collection-signed.json
+  packages.json
   *.md
   .gitignore
+  .github/workflows/**
 Copyright:  2021 SAP SE or an SAP affiliate company and cloud-sdk-ios contributors
 License: Apache-2.0
 
