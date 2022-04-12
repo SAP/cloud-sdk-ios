@@ -34,6 +34,7 @@ Files:
   *.md
   .gitignore
   .github/workflows/**
+  update_version.sh
 Copyright:  2021 SAP SE or an SAP affiliate company and cloud-sdk-ios contributors
 License: Apache-2.0
 
