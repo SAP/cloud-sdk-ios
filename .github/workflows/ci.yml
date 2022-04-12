@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  verify-swift-package:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Create .netrc file with credentials to download binaries from SAP RSBC
+      uses: little-core-labs/netrc-creds@master
+      with:
+        machine: rbsc.repositories.cloud.sap
+        login: sap-sdkiospecs
+        password: ${{ secrets.RSBC_USER_BASICAUTH_PWD }}
+    - name: Reset the complete cache/build directory
+      run: swift package reset
+    - name: Check download of binary frameworks
+      run: swift package resolve
+    - name: View downloaded binary frameworks
+      run: ls .build/artifacts/cloud-sdk-ios
