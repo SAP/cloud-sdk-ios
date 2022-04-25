@@ -7,6 +7,18 @@ ROOT_URL="https://rbsc.repositories.cloud.sap/nexus3/repository/maven73555000100
 sed "s#let version.*#let version = \"$VERSION\"#" Package.swift > tmp.swift
 mv tmp.swift Package.swift
 
+# Update platforms
+if [[ "$VERSION" == 7* ]]; then
+  sed "s/.*platforms.*/    platforms: [.iOS(.v14)],/" Package.swift > tmp.swift
+  mv tmp.swift Package.swift
+elif [[ "$VERSION" == 6* ]];
+then
+  sed "s/.*platforms.*/    platforms: [.iOS(.v13)],/" Package.swift > tmp.swift
+  mv tmp.swift Package.swift
+else
+  echo "ERROR !!!!"
+fi
+
 # Compute checksums
 echo "Downloading: $ROOT_URL/foundation/SAPCommon/$VERSION/SAPCommon-$VERSION-Release-xcframework.zip"
 curl -n -L -f $ROOT_URL/foundation/SAPCommon/$VERSION/SAPCommon-$VERSION-Release-xcframework.zip --output SAPCommon.zip

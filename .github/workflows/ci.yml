@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  verify-swift-package:
+  verify-swift-package-binaryTargets:
     runs-on: ubuntu-latest
 
     steps:
@@ -24,3 +24,29 @@ jobs:
       run: swift package resolve
     - name: View downloaded binary frameworks
       run: ls .build/artifacts/cloud-sdk-ios
+
+  verify-swift-package-platform:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Verify platform
+      run: |
+        VERSION=$(cat Package.swift | grep 'let version')
+        PLATFORM=$(cat Package.swift | grep 'platforms')
+        if [[ "$VERSION" == *"\"7"* ]]; then
+            if [[ "$PLATFORM" == *14* ]]; then
+              exit 0
+            else
+              echo "SDK version 7.X requires iOS 14 as minimum deployment target"
+              exit 1
+            fi
+        fi
+        if [[ "$VERSION" == *"\"6"* ]]; then
+            if [[ "$PLATFORM" == *13* ]]; then
+              exit 0
+            else
+              echo "SDK version 6.x requires iOS 13 as minimum deployment target"
+              exit 1
+            fi
+        fi

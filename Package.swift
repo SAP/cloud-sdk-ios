@@ -15,9 +15,7 @@ let sapMLChecksum = "bc3717b96eb24a294acbbc74d37942570b4b0610396aaa5973b95177a03
 
 let package = Package(
     name: "cloud-sdk-ios",
-    platforms: [
-        .iOS(.v14)
-    ],
+    platforms: [.iOS(.v14)],
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
