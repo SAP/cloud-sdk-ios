@@ -82,6 +82,7 @@ If you wish to make a contribution to the repository, please [submit a Pull Requ
 2. Clone / fork & clone the repository
 3. Open [update_version.sh](./update_version.sh)
 4. In line 3, change `VERSION="x.x.x"` to the version you want to update to. Please make sure the version is available in the [SDK cloud shipments](https://rbsc.repositories.cloud.sap/nexus3/#browse/browse:maven73555000100900005862)
+   - Note: download URL and minimum deployment target may change with major release and has to be adjusted in script `update_version.sh` then.
 5. Run the script
 6. Make sure that the newly computed checksums are all different. If some checksums are the same it is an indicator for a failed download (e.g. file not present for this version)
 7. Commit your changes and file a pull request
