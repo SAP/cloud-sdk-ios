@@ -1,7 +1,21 @@
 #!/bin/zsh
 
-VERSION="7.0.3"
-ROOT_URL="https://rbsc.repositories.cloud.sap/nexus3/repository/maven73555000100900005862/com/sap/mobile/platform/client/hcp/sdk/ios"
+VERSION="6.1.15"
+
+# Update ROOT_URL
+ROOT_URL=""
+if [[ "$VERSION" == 7* ]]; then
+  ROOT_URL="https://rbsc.repositories.cloud.sap/nexus3/repository/maven73555000100900005862/com/sap/mobile/platform/client/hcp/sdk/ios"
+  sed "s#let root.*#let root = \"$ROOT_URL\"#" Package.swift > tmp.swift
+  mv tmp.swift Package.swift
+elif [[ "$VERSION" == 6* ]];
+then
+  ROOT_URL="https://rbsc.repositories.cloud.sap/nexus3/repository/maven73554900100900005307/com/sap/mobile/platform/client/hcp/sdk/ios"
+  sed "s#let root.*#let root = \"$ROOT_URL\"#" Package.swift > tmp.swift
+  mv tmp.swift Package.swift
+else
+  echo "ERROR !!!!"
+fi
 
 # Update version
 sed "s#let version.*#let version = \"$VERSION\"#" Package.swift > tmp.swift
