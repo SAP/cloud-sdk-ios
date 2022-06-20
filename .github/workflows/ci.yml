@@ -34,11 +34,11 @@ jobs:
       run: |
         VERSION=$(cat Package.swift | grep 'let version')
         PLATFORM=$(cat Package.swift | grep 'platforms')
-        if [[ "$VERSION" == *"\"7"* ]]; then
+        if [[ "$VERSION" == *"\"7"* || "$VERSION" == *"\"8"* ]]; then
             if [[ "$PLATFORM" == *14* ]]; then
               exit 0
             else
-              echo "SDK version 7.X requires iOS 14 as minimum deployment target"
+              echo "SDK version 7.X and 8.X require iOS 14 as minimum deployment target"
               exit 1
             fi
         fi
