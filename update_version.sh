@@ -8,6 +8,10 @@ if [[ "$VERSION" == 7* ]]; then
   ROOT_URL="https://rbsc.repositories.cloud.sap/nexus3/repository/maven73555000100900005862/com/sap/mobile/platform/client/hcp/sdk/ios"
   sed "s#let root.*#let root = \"$ROOT_URL\"#" Package.swift > tmp.swift
   mv tmp.swift Package.swift
+elif [[ "$VERSION" == 8* ]]; then
+  ROOT_URL="https://rbsc.repositories.cloud.sap/nexus3/repository/maven73554900100900006843/com/sap/mobile/platform/client/hcp/sdk/ios"
+  sed "s#let root.*#let root = \"$ROOT_URL\"#" Package.swift > tmp.swift
+  mv tmp.swift Package.swift
 elif [[ "$VERSION" == 6* ]];
 then
   ROOT_URL="https://rbsc.repositories.cloud.sap/nexus3/repository/maven73554900100900005307/com/sap/mobile/platform/client/hcp/sdk/ios"
@@ -22,7 +26,7 @@ sed "s#let version.*#let version = \"$VERSION\"#" Package.swift > tmp.swift
 mv tmp.swift Package.swift
 
 # Update platforms
-if [[ "$VERSION" == 7* ]]; then
+if [[ "$VERSION" == 7* || "$VERSION" == 8* ]]; then
   sed "s/.*platforms.*/    platforms: [.iOS(.v14)],/" Package.swift > tmp.swift
   mv tmp.swift Package.swift
 elif [[ "$VERSION" == 6* ]];
