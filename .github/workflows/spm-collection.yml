@@ -53,6 +53,8 @@ jobs:
         if: github.event_name == 'push' || github.event.inputs.commitChanges == 'true'
         uses: peter-evans/create-pull-request@v4
         with:
+          add-paths: |
+            collection-signed.json
           commit-message: 'chore: auto create/update collection-signed.json'
           branch: updatePackageCollection
           delete-branch: true
