@@ -16,7 +16,7 @@ jobs:
     runs-on: macos-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Create .netrc file with credentials to download binaries from SAP RSBC
         uses: little-core-labs/netrc-creds@master
         with:
@@ -55,13 +55,14 @@ jobs:
         run: |
           bin/package-collection-sign  collection.json collection-signed.json spm_collection.pem spm_collection.cer
           cat collection-signed.json
-      - name: Commit signed collection file
+      - name: Create pull request to commit signed collection file
         if: github.event_name == 'push' || github.event.inputs.commitChanges == 'true'
-        run: |
-          git config user.email 'github-action@users.noreply.github.com'
-          git config user.name 'GitHub Action'
-          git add collection-signed.json
-          git commit -m "Automatically create/update collection-signed.json"
-          git push origin main
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: peter-evans/create-pull-request@v4
+        with:
+          add-paths: |
+            collection-signed.json
+          commit-message: 'chore: auto create/update collection-signed.json'
+          branch: updatePackageCollection
+          delete-branch: true
+          title: 'Automatically create/update collection-signed.json'
+          body: ''
