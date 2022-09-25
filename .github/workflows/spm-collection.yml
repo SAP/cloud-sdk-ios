@@ -17,6 +17,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+      - name: Create .netrc file with credentials to download binaries from SAP RSBC
+        uses: little-core-labs/netrc-creds@master
+        with:
+          machine: rbsc.repositories.cloud.sap
+          login: sap-sdkiospecs
+          password: ${{ secrets.RSBC_USER_BASICAUTH_PWD }}
       - name: Cache tools
         id: cache-tools
         uses: actions/cache@v2

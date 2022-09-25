@@ -3,6 +3,9 @@
   "overview": "Swift Packages provided by the SAP BTP SDK for iOS",
   "packages": [
     {
+      "url": "https://github.com/SAP/cloud-sdk-ios.git"
+    },
+    {
       "url": "https://github.com/SAP/cloud-sdk-ios-fiori.git"
     },
     {
