@@ -25,6 +25,15 @@ else
   echo "ERROR !!!!"
 fi
 
+# Update swift-tools-version
+if [[ "$VERSION" == 9* ]]; then
+  sed "s/.*swift-tools-version.*/\/\/ swift-tools-version:5.5/" Package.swift > tmp.swift
+  mv tmp.swift Package.swift
+else
+  sed "s/.*swift-tools-version.*/\/\/ swift-tools-version:5.3/" Package.swift > tmp.swift
+  mv tmp.swift Package.swift
+fi
+
 # Update version
 sed "s#let version.*#let version = \"$VERSION\"#" Package.swift > tmp.swift
 mv tmp.swift Package.swift
