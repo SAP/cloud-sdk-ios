@@ -3,6 +3,7 @@
 > This Swift Package distributes the SAP BTP SDK for iOS binary frameworks and informs you about related open-source Swift Packages.
 
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP/cloud-sdk-ios)](https://api.reuse.software/info/github.com/SAP/cloud-sdk-ios)
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/SAP/cloud-sdk-ios?label=Latest%20Release%20%28SemVer%29&sort=semver)
 
 The [BTP SDK for iOS](https://developers.sap.com/topics/sap-btp-sdk-for-ios.html) enables you to quickly develop your native apps with Swift. The SDK extends the standard Swift Apple iOS frameworks with the reusable UI components from the SAP Fiori for iOS Design Language. It provides APIs which seamlessly integrate apps with SAP BTP services.
 
