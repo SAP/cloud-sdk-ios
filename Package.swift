@@ -6,7 +6,7 @@ let version = "9.0.4"
 let root = "https://rbsc.repositories.cloud.sap/nexus3/repository/maven73555000100900006345/com/sap/mobile/platform/client/hcp/sdk/ios"
 
 let sapCommonChecksum = "fc51ddfdd3e08c2461074a077a93cc1496808c8814afbfb7faeb47a834bf255d"
-let sapFioriChecksum = "7ccfb27b419edcec239a973a5ab182c33c14152956bf89bbf787184f7e1fd052"
+let sapFioriChecksum = "0e58fbca9cdf93b8d415c49f4d1deeb58bc0e9ce8c69eb57520a76b6c7fe6a29"
 let sapFioriFlowsChecksum = "4656aa1bd8aeba8423e7f6598b6341049c8832025191174c2419d306592e91e6"
 let sapFoundationChecksum = "c189d5d0ba4c98719360cc94d59c69dc5adeec7fb0ba29654250d14dc1506ceb"
 let sapODataChecksum = "bade08527757695ed0b8ecebe18a3f69cb120a80ea4c42833c81bb68461423c6"
