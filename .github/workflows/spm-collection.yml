@@ -34,7 +34,7 @@ jobs:
         run: |
           git clone https://github.com/apple/swift-package-collection-generator.git
           cd swift-package-collection-generator
-          git checkout 5.5
+          git checkout 5.7
           swift build -c release
           [ -d "../bin" ] || mkdir ../bin
           cp .build/release/package-collection-generate ../bin/
