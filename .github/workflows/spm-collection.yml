@@ -57,11 +57,12 @@ jobs:
           cat collection-signed.json
       - name: Create pull request to commit signed collection file
         if: github.event_name == 'push' || github.event.inputs.commitChanges == 'true'
-        uses: peter-evans/create-pull-request@v4
+        uses: peter-evans/create-pull-request@v5
         with:
           add-paths: |
             collection-signed.json
           commit-message: 'chore: auto create/update collection-signed.json'
+          base: main
           branch: updatePackageCollection
           delete-branch: true
           title: 'Automatically create/update collection-signed.json'
