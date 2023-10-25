@@ -7,9 +7,9 @@ let root = "https://rbsc.repositories.cloud.sap/nexus3/repository/maven735550001
 
 let sapCommonChecksum = "aac6cf7def081c5bffa87489cdd0bc1baf1bba2dd6c38e9c4362b7a9b8d550bf"
 let sapFioriChecksum = "14b697520bfc76f33a9726d935c1a295640047a33c3ab2580a9c12e2b6f5ce79"
-let sapFioriFlowsChecksum = "d285616715c1f87052e30aabad42aeef6f96a294bbf21a1674a0b9605f8167d7"
+let sapFioriFlowsChecksum = "cb5cc6147c9bcfe6b4327d617d63baddff6d677509eb74b6963a0023c63a9eeb"
 let sapFoundationChecksum = "7e14a9eebdfffa6325a05216318c3266ee898a46ed766952cd47446559f22be4"
-let sapODataChecksum = "92b96fd6380cc22a44b97470265e804e210c8290587f89f3f74b751b77887d3f"
+let sapODataChecksum = "494c937c9dc30ea5739307d014372a3cbfc373b0cf9d06714bfa777f300eabea"
 let sapOfflineODataChecksum = "9b085469aa2c7645bed0600afb3f98cb455ed71ed60fcf9af33db2a462c2bd91"
 let sapMLChecksum = "447dea9bf9636e5164b8f663ccdadc8bc83acc0faf865af104374a3218339485"
 
