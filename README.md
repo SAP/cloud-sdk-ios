@@ -65,9 +65,9 @@ You can choose multiple of the following package products to be added to your ap
 
 ## Digital Signature of Frameworks
 
-Xcode 15 automatically verifies your app's dependencies and protects your supply chain integrity by alerting you if an issue is detected.
-Xcode now shows a new section in the Inspector that displays the signature status for the xcframeworks you include within your app.
-Our XcFrameworks are signed by Apple Developer Program Identity with Team ID - "7R5ZEU67FQ" just like below screenshot:
+SAP SE signs the XCFrameworks from SAP BTP SDK for iOS with Team ID "7R5ZEU67FQ".
+
+> Note: Xcode 15 and above will automatically verify your app's dependencies and protect your supply chain integrity by alerting you if an issue is detected. Xcode shows a section in the Inspector that displays the signature status for the XCFrameworks you include within your app.
 
 <img width="249" alt="image" src="https://github.com/SAP/cloud-sdk-ios/assets/22234359/1eb8e90d-4da5-4ed1-af75-2281b4f62db9">
 
