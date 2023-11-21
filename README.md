@@ -63,9 +63,18 @@ You can choose multiple of the following package products to be added to your ap
 
  > Quoting the SAP support site, *“you can download the SAP products that are associated with your S-user ID. While every visitor can browse the list of software products without any special permissions, downloading files requires the Software Download authorization; to request it, contact a user administrator in your company.”* This restriction also applies to the cloud shipment channel.
 
+## Digital Signature of Frameworks
+
+SAP SE signs the XCFrameworks from SAP BTP SDK for iOS with Team ID "7R5ZEU67FQ".
+
+> Note: Xcode 15 and above will automatically verify your app's dependencies and protect your supply chain integrity by alerting you if an issue is detected. Xcode shows a section in the Inspector that displays the signature status for the XCFrameworks you include within your app.
+
+<img width="249" alt="image" src="https://github.com/SAP/cloud-sdk-ios/assets/22234359/1eb8e90d-4da5-4ed1-af75-2281b4f62db9">
+
 ## Known Issues
 
 None.
+
 
 ## How to obtain support
 
