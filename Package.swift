@@ -1,21 +1,21 @@
-// swift-tools-version:5.5
+// swift-tools-version:5.9
 
 import PackageDescription
 
-let version = "9.2.6"
-let root = "https://rbsc.repositories.cloud.sap/nexus3/repository/maven73555000100900006345/com/sap/mobile/platform/client/hcp/sdk/ios"
+let version = "10.0.0"
+let root = "https://rbsc.repositories.cloud.sap/nexus3/repository/maven73554900100900008062/ios"
 
-let sapCommonChecksum = "defb2e2266738d328b01dfa6272657df73c1589d34ec7be53c3fa1d50118b882"
-let sapFioriChecksum = "5a87888fa0d5940264baceeb86cf2abdd82e1c3718c3a744a200d8c5abacabc5"
-let sapFioriFlowsChecksum = "21559c571f6efc66238d7372d8afea96f2e92bd2848a0c21ea15481ef89d8396"
-let sapFoundationChecksum = "44db4b7386c32442eb20f9a40006f916b4844cff0351602d3687ae0ad1d664c4"
-let sapODataChecksum = "345a7e8c78674b9215fc027891575622539bf9709dba086e27a201668f1d71b2"
-let sapOfflineODataChecksum = "9e7f8976f22575a9d1c342235cb25f1f677e4c435e02123853909c19696bcb29"
-let sapMLChecksum = "341fb9d386e3459c3f226b88040ee027b01278d0daaf65eba4bcfe812ad47760"
+let sapCommonChecksum = "479b9c01e8b81c07ee9d1677d9590444a4ad9e732c622d4135ca30cef6c19bd1"
+let sapFioriChecksum = "03c79b6e3f480803456d24f2ad1becaa19f0837a243a9caebed7be7b5863a203"
+let sapFioriFlowsChecksum = "d62012a85c14206b1296d9315aa0f3a2373f16aa052c78cf9cb6cb0c3fdcca6c"
+let sapFoundationChecksum = "87caee00638d53e5b339a94f214b5d818e66363f517b86f864818dcf271e058e"
+let sapODataChecksum = "73d975bc57569a20c366e3c6b3ae58772dd57cfb4a8dff947c59435152189457"
+let sapOfflineODataChecksum = "1aa3e32b39dd4832a20b7e81b5f8b5a71fd88ecaab4754e8606f2ae07f87e36a"
+let sapMLChecksum = "8ba9eff83791dda4fc78745011953efacdc55979408701199405954b0a1f9873"
 
 let package = Package(
     name: "cloud-sdk-ios",
-    platforms: [.iOS(.v15)],
+    platforms: [.iOS(.v16)],
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
@@ -45,19 +45,19 @@ let package = Package(
         // .package(url: /* package url */, from: "1.0.0"),
     ],
     targets: [
-        .binaryTarget(name: "SAPCommon", url: "\(root)/foundation/SAPCommon/\(version)/SAPCommon-\(version)-Release-xcframework.zip",
+        .binaryTarget(name: "SAPCommon", url: "\(root)/SAPCommon/\(version)/SAPCommon-\(version)-Release.xcframework.zip",
                       checksum: sapCommonChecksum),
-        .binaryTarget(name: "SAPFiori", url: "\(root)/uireuse/SAPFiori/\(version)/SAPFiori-\(version)-Release-xcframework.zip",
+        .binaryTarget(name: "SAPFiori", url: "\(root)/SAPFiori/\(version)/SAPFiori-\(version)-Release.xcframework.zip",
                       checksum: sapFioriChecksum),
-        .binaryTarget(name: "SAPFioriFlows", url: "\(root)/flows/SAPFioriFlows/\(version)/SAPFioriFlows-\(version)-Release-xcframework.zip",
+        .binaryTarget(name: "SAPFioriFlows", url: "\(root)/SAPFioriFlows/\(version)/SAPFioriFlows-\(version)-Release.xcframework.zip",
                       checksum: sapFioriFlowsChecksum),
-        .binaryTarget(name: "SAPFoundation", url: "\(root)/foundation/SAPFoundation/\(version)/SAPFoundation-\(version)-Release-xcframework.zip",
+        .binaryTarget(name: "SAPFoundation", url: "\(root)/SAPFoundation/\(version)/SAPFoundation-\(version)-Release.xcframework.zip",
                       checksum: sapFoundationChecksum),
-        .binaryTarget(name: "SAPOData", url: "\(root)/foundation/SAPOData/\(version)/SAPOData-\(version)-Release-xcframework.zip",
+        .binaryTarget(name: "SAPOData", url: "\(root)/SAPOData/\(version)/SAPOData-\(version)-Release.xcframework.zip",
                       checksum: sapODataChecksum),
-        .binaryTarget(name: "SAPOfflineOData", url: "\(root)/foundation/SAPOfflineOData/\(version)/SAPOfflineOData-\(version)-Release-xcframework.zip",
+        .binaryTarget(name: "SAPOfflineOData", url: "\(root)/SAPOfflineOData/\(version)/SAPOfflineOData-\(version)-Release.xcframework.zip",
                       checksum: sapOfflineODataChecksum),
-        .binaryTarget(name: "SAPML", url: "\(root)/uireuse/SAPML/\(version)/SAPML-\(version)-Release-xcframework.zip",
+        .binaryTarget(name: "SAPML", url: "\(root)/SAPML/\(version)/SAPML-\(version)-Release.xcframework.zip",
                       checksum: sapMLChecksum)
     ]
 )
