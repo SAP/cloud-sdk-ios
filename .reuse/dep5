@@ -35,6 +35,7 @@ Files:
   .gitignore
   .github/workflows/**
   update_version.sh
+  pre_10_update_version.sh
   .spi.yml
 Copyright:  2023 SAP SE or an SAP affiliate company and cloud-sdk-ios contributors
 License: Apache-2.0
