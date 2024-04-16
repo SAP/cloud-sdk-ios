@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-VERSION="24.4.0"
+VERSION="10.0.2"
 
 # Update ROOT_URL
 ROOT_URL=""
