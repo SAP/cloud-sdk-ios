@@ -57,6 +57,24 @@ You can choose multiple of the following package products to be added to your ap
 
 <img width="774" alt="ChoosePackageProducts" src="https://user-images.githubusercontent.com/4176826/163604677-00a3616b-a351-4a2f-abc8-d57bc87f40fb.png">
 
+## Troubleshooting
+
+### Caching
+
+SwiftPM's caching might be incorrect on your machine and can cause error messages, also in Xcode, during package resolution. You then can see error messages such as `invalid archive returned from 'https//rbsc.respositories.cloud.sap/nexus3/...`
+
+![ExampleErrorMessages](https://private-user-images.githubusercontent.com/120622460/322097216-e8d3ad20-7747-4225-a460-cb099c39b56a.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTQ0MjI1OTgsIm5iZiI6MTcxNDQyMjI5OCwicGF0aCI6Ii8xMjA2MjI0NjAvMzIyMDk3MjE2LWU4ZDNhZDIwLTc3NDctNDIyNS1hNDYwLWNiMDk5YzM5YjU2YS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNDI5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDQyOVQyMDI0NThaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0yODkyZDhlZThjYTk2MDZiYmZkN2FmMDNmNzgzZDhlN2E2ODBmNTk5N2FhZDBjYmUyOWEyMzI0YjAzYThmYTA0JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.6h3IE15TExK6OozKUsouOKRrB61IREvFRwa5I__lJGg)
+
+To fix the issue please close Xcode and run the following commands to clear your local caches:
+- `rm -rf $HOME/Library/Caches/org.swift.swiftpm/`
+- `rm -rf $HOME/Library/org.swift.swiftpm`
+
+### Licensing
+
+The download of the SAP BTP SDK for iOS binary frameworks is powered by SAP's [Repository-Based Shipment Channel](https://help.sap.com/docs/RBSC/0a64be17478d4f5ba45d14ab62b0d74c/175673b12feb41739df4f041db52fe76.html). RBSC grants access to these repositories based on a license check. License information is based on the purchased software and is attached to your S-user account.
+
+If you receive an HTTP 403 Forbidden then please check your current licenses as described [here](https://help.sap.com/docs/RBSC/0a64be17478d4f5ba45d14ab62b0d74c/74a9a6cd668842cc88e623ed39d8373c.html) to ensure that your user has a license for the proper product version.
+
 ## Limitations
 
 **This service is not available for Trial versions of the SDK.**
@@ -73,7 +91,7 @@ SAP SE signs the XCFrameworks from SAP BTP SDK for iOS with Team ID "7R5ZEU67FQ"
 
 ## Known Issues
 
-None.
+
 
 
 ## How to obtain support
