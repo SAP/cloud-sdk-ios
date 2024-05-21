@@ -9,7 +9,7 @@ let sapCommonChecksum = "ab536efb4a8e92bdfc34e15064330634d771bee994364a86275dad2
 let sapFioriChecksum = "a62b6e8c9810c1087946772b29efc5e18d17727b18ab2bf8bb9a34fc80ec8b4a"
 let sapFioriFlowsChecksum = "3757476a8dd3032ca6731a5699c8d67c6c152a4a6b714c139abd0dbd406c2dd7"
 let sapFoundationChecksum = "7f45441402dc1d405907037b6e36188da6184e2928ec2b7e7bd7f6cc5153dc9d"
-let sapODataChecksum = "6a638e64ea833017a4acf63f6f45ec536fe8c166a2b2966d8d18fe7f5c664366"
+let sapODataChecksum = "ad5161318637202ee23a0e49dba735f7de5560a1818f4e65615e736ca24285f0"
 let sapOfflineODataChecksum = "dcbd97030d77345bac1ee10db181ff89023d976d3d7e47e08d8163174e95b689"
 let sapMLChecksum = "2b4a51e937d398030825116d08867096b5613bf9ee0e61170a2fdd38c915d4fb"
 
