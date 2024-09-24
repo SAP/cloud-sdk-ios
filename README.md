@@ -102,7 +102,7 @@ For issues related to any of the referenced resources and binaries, please file 
 
 ## Contributing
 
-If you wish to make a contribution to the repository, please [submit a Pull Request](https://github.com/SAP/cloud-sdk-ios/pulls).  It will be reviewed by the maintainers, however, we cannot commit to merging all contributions.
+If you wish to make a contribution to the repository, please adhere to SAPs [contribution guidelines](https://github.com/SAP/.github/blob/main/CONTRIBUTING.md).
 
 ### Maintainers: Updating the package
 
