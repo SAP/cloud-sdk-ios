@@ -45,7 +45,7 @@ elif [[ "$VERSION" == 10* || "$VERSION" == 24.4* || "$VERSION" == 24.8* ]]; then
   sed "s/.*swift-tools-version.*/\/\/ swift-tools-version:5.9/" Package.swift > tmp.swift
   mv tmp.swift Package.swift
 elif [[ "$VERSION" == 24.12* ]]; then
-  sed "s/.*swift-tools-version.*/\/\/ swift-tools-version:6.0.2/" Package.swift > tmp.swift
+  sed "s/.*swift-tools-version.*/\/\/ swift-tools-version:6.0/" Package.swift > tmp.swift
   mv tmp.swift Package.swift
 else
   sed "s/.*swift-tools-version.*/\/\/ swift-tools-version:5.3/" Package.swift > tmp.swift
