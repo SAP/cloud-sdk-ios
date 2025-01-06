@@ -16,7 +16,7 @@ jobs:
       uses: little-core-labs/netrc-creds@master
       with:
         machine: rbsc.repositories.cloud.sap
-        login: sap-sdkiospecs
+        login: 0000202418-iossdk
         password: ${{ secrets.RSBC_USER_BASICAUTH_PWD }}
     - name: Reset the complete cache/build directory
       run: swift package reset
