@@ -31,8 +31,7 @@ The SDK binaries are hosted in SAP's Internet-facing repository, which requires 
 
  > SAP Customers & Partners:  use your **S-User** credentials
 
- > SAP Employees: use your **SAP email username & GLOBAL** credentials
-
+ > SAP Employees: request and use an internal S-User as described [here](https://shipments.pages.repositories.cloud.sap/docs/shipment-sap-client.html#internal-scenario) 
 <img src="https://github.com/SAP/cloud-sdk-ios-podspecs/blob/resources/gif/GetCredentialsFromRepo.gif?raw=true" width=600>
 
 ### Installing credential
