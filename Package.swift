@@ -2,20 +2,20 @@
 
 import PackageDescription
 
-let version = "26.1.1"
+let version = "25.8.6"
 let root = "https://rbsc.repositories.cloud.sap/nexus3/repository/maven73555000100900007915/ios"
 
-let sapCommonChecksum = "c95851905d25bed3dab8f21179d744ddaa6286cf86235cf9b0560b578f57e7fd"
-let sapFioriChecksum = "ccc1debadaee65e51ce901f705ecc21740238f44bb18c67883ceb0d910d24aa8"
-let sapFioriFlowsChecksum = "cb02997bfe68a87a1e20901819b9f5c298182ecc3ef702d536c38d7b55984126"
-let sapFoundationChecksum = "e2c72ce029cb9624f44ab924a04c1b9dce3d895b56cb2940de1a395c652215da"
-let sapODataChecksum = "e4f137a86924eaefdff754ee763ccb8536fddad587a63daa29e3d04429b587e3"
-let sapOfflineODataChecksum = "a8746ca9f02915b08255868556e692955ae2a5a0db1e25dabc86f2457e559111"
-let sapMLChecksum = "f0700435f67a51c4b03f98c6a15c9125698806fb21a41f241c9de2e1ef7ef29b"
+let sapCommonChecksum = "de1b16e731529db76343a8a086f8cd798af491dbd4eb2110c8a5d2716cc56ca7"
+let sapFioriChecksum = "ad925e8a568729df6d2d0083aad5c501a28eeb59adad6421f280e2fc07013cd2"
+let sapFioriFlowsChecksum = "f3e5122b965555facd7ca14e61d6e798c583e4b8fd998c8436e326d335b4ce34"
+let sapFoundationChecksum = "51c0939b0e26060b683882b5290f782bc00673b4f31447c066d61668daa32511"
+let sapODataChecksum = "ef2d2f667a2ac06badf0dc736d84703add52701127e69a4f7b3723eba54cd7f9"
+let sapOfflineODataChecksum = "2657a25dc9933ab94e0448d15e4fbe15b038a9758c33920258e9e37152a77fb9"
+let sapMLChecksum = "df07e9fc0b7873523c6a62f0213e29e1fd09f8b485fb879c8c5de20236fee911"
 
 let package = Package(
     name: "cloud-sdk-ios",
-    platforms: [.iOS(.v18)],
+    platforms: [.iOS(.v17)],
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
