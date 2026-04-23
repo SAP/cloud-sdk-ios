@@ -33,6 +33,10 @@ elif [[ "$VERSION" == 24.8* || "$VERSION" == 24.12* || "$VERSION" == 25.4* || "$
   ROOT_URL="https://rbsc.repositories.cloud.sap/nexus3/repository/maven73555000100900007915/ios"
   sed "s#let root.*#let root = \"$ROOT_URL\"#" Package.swift > tmp.swift
   mv tmp.swift Package.swift
+elif [[ "$VERSION" == 26.4* || "$VERSION" == 26.8* || "$VERSION" == 26.11* ]]; then
+  ROOT_URL="https://rbsc.repositories.cloud.sap/nexus3/repository/maven73554900100900010451/ios"
+  sed "s#let root.*#let root = \"$ROOT_URL\"#" Package.swift > tmp.swift
+  mv tmp.swift Package.swift
 else
   echo "ERROR !!!!"
 fi
@@ -44,7 +48,7 @@ if [[ "$VERSION" == 9* ]]; then
 elif [[ "$VERSION" == 10* || "$VERSION" == 24.4* || "$VERSION" == 24.8* ]]; then
   sed "s/.*swift-tools-version.*/\/\/ swift-tools-version:5.9/" Package.swift > tmp.swift
   mv tmp.swift Package.swift
-elif [[ "$VERSION" == 24.12* || "$VERSION" == 25.4* || "$VERSION" == 25.8* || "$VERSION" == 25.11* || "$VERSION" == 26.1* ]]; then
+elif [[ "$VERSION" == 24.12* || "$VERSION" == 25.4* || "$VERSION" == 25.8* || "$VERSION" == 25.11* || "$VERSION" == 26.1* || "$VERSION" == 26.4* ]]; then
   sed "s/.*swift-tools-version.*/\/\/ swift-tools-version:6.0/" Package.swift > tmp.swift
   mv tmp.swift Package.swift
 else
@@ -69,7 +73,7 @@ elif [[ "$VERSION" == 10* || "$VERSION" == 24.4* || "$VERSION" == 24.8* ]]; then
 elif [[ "$VERSION" == 24.12* || "$VERSION" == 25.4* || "$VERSION" == 25.8* ]]; then
   sed "s/.*platforms.*/    platforms: [.iOS(.v17)],/" Package.swift > tmp.swift
   mv tmp.swift Package.swift
-elif [[ "$VERSION" == 25.11* || "$VERSION" == 26.1* ]]; then
+elif [[ "$VERSION" == 25.11* || "$VERSION" == 26.1* || "$VERSION" == 26.4* ]]; then
   sed "s/.*platforms.*/    platforms: [.iOS(.v18)],/" Package.swift > tmp.swift
   mv tmp.swift Package.swift
 elif [[ "$VERSION" == 6* ]]; then
