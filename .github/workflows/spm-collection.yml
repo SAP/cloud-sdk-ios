@@ -11,6 +11,10 @@ on:
         required: true
         default: "true"
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   generate-signed-collection:
     runs-on: macos-12
