@@ -114,8 +114,8 @@ If you wish to make a contribution to the repository, please adhere to SAPs [con
 6. Make sure that the newly computed checksums are all different. If some checksums are the same it is an indicator for a failed download (e.g. file not present for this version)
 7. Commit your changes and file a pull request
 
-## Using Package Collection in Xcode 13
+## Using Package Collection
 
-In Xcode, choose <kbd>File</kbd>, then <kbd>Add Packages... </kbd>. Click the <kbd>+</kbd> > button, choose <kbd>Add Swift Package Collection</kbd>, paste [this URL](https://raw.githubusercontent.com/SAP/cloud-sdk-ios/main/collection-signed.json) and click <kbd>Load</kbd>.
+In Xcode, choose <kbd>File</kbd>, then <kbd>Add Packages... </kbd>. Click the <kbd>+</kbd> > button, choose <kbd>Add Swift Package Collection</kbd>, paste [this URL](https://swiftpackageindex.com/SAP/collection.json) and click <kbd>Load</kbd>.
 
 You can now add packages from our collection to your project by selecting one and clicking <kbd>Add Package</kbd>.
