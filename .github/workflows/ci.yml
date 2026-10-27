@@ -14,13 +14,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
     - name: Create .netrc file with credentials to download binaries from SAP RSBC
-      uses: little-core-labs/netrc-creds@master
-      with:
-        machine: rbsc.repositories.cloud.sap
-        login: 0000202418-iossdk
-        password: ${{ secrets.RSBC_USER_BASICAUTH_PWD }}
+      run: |
+        echo "machine rbsc.repositories.cloud.sap login 0000202418-iossdk password ${{ secrets.RSBC_USER_BASICAUTH_PWD }}" >> ~/.netrc
+        chmod 600 ~/.netrc
     - name: Reset the complete cache/build directory
       run: swift package reset
     - name: Check download of binary frameworks
@@ -32,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
     - name: Verify platform
       run: |
         VERSION=$(cat Package.swift | grep 'let version')
